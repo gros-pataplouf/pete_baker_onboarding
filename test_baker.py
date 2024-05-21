@@ -1,11 +1,7 @@
+import pytest
 from  baker import cake
 
-# case 1: one ingredient cake, recipe only for one ingredient same quantity
-# case 2: one ingredient cake, recipe only for one ingredient same quantity, division result is float < 0
-# case 3: one ingredient cake, recipe only another ingredient
-# case 4: cake with several available, recipe with several available, partial overlap, cake not possible
-# case 5: cake with several available, recipe with several, recipe is subs. of available, cake possible
-
+#STEP 1: Adapt the production code to make to first test pass.
 
 def test_cake_only_one_ingredient():
     available = {"flour": 500}
@@ -13,36 +9,24 @@ def test_cake_only_one_ingredient():
     result = cake(available, recipe)
     assert result == 1
 
+#STEP 2: Delete the @pytest.mark.skip decorator for each of these tests and adapt the production code to make tests pass.
+
+@pytest.mark.skip
 def test_one_ingredient_not_in_recipe():
     available = {"flour": 500}
     recipe = {"milk": 500}
     result = cake(available, recipe)
     assert result == 0
 
+@pytest.mark.skip
 def test_returns_0_if_ingredient_insufficient():
     available = {"sugar": 500}
     recipe = {"sugar": 600}
     result = cake(available, recipe)
     assert result == 0
 
-def test_returns_num_of_cakes_if_all_available_enough():
-    available = {"sugar": 500, "milk": 250, "flour": 700, "eggs": 12}
-    recipe = {"sugar": 100, "milk": 100, "flour": 340, "eggs": 1}
-    result = cake(available, recipe)
-    assert result == 2
+# STEP 3: now write a test for the following case: cake function should return a positive integer if all ingredients are available in sufficient quantity
 
-def test_returns_0_if_one_ingredient_not_enough():
-    available = {"sugar": 500, "milk": 30, "flour": 700, "eggs": 12}
-    recipe = {"sugar": 100, "milk": 100, "flour": 340, "eggs": 1}
-    result = cake(available, recipe)
-    assert result == 0
+# STEP 4: now write a test for the following case: cake function should return 0 if at least one ingredient is available in insufficient quantity
 
-def test_returns_0_if_one_ingredient_missing():
-    available = {"sugar": 500, "flour": 700, "eggs": 12}
-    recipe = {"sugar": 100, "milk": 100, "flour": 340, "eggs": 1}
-    result = cake(available, recipe)
-    assert result == 0
-
-
-
-    
+# STEP 5: one scenario has not been considered. Can you figure out which one it is, and cover the edge case?
