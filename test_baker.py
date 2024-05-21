@@ -13,3 +13,9 @@ def test_cake_only_one_ingredient():
     recipe = {"flour": 500}
     result = cake(ingredients, recipe)
     assert result == 1
+
+def test_one_ingredient_not_in_recipe():
+    ingredients = {"flour": 500}
+    recipe = {"milk": 500}
+    result = cake(ingredients, recipe)
+    assert result == 0

@@ -1,2 +1,5 @@
 def cake(ingredients, recipe):
-    return list(ingredients.values())[0]/list(recipe.values())[0]
+    for elt in recipe:
+        if ingredients.get(elt):
+            return ingredients.get(elt)/recipe.get(elt)
+    return 0
