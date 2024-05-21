@@ -19,3 +19,9 @@ def test_one_ingredient_not_in_recipe():
     recipe = {"milk": 500}
     result = cake(ingredients, recipe)
     assert result == 0
+
+def test_returns_0_if_ingredient_insufficient():
+    ingredients = {"sugar": 500}
+    recipe = {"sugar": 600}
+    result = cake(ingredients, recipe)
+    assert result == 0
