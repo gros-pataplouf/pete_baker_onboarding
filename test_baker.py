@@ -32,7 +32,13 @@ def test_returns_num_of_cakes_if_all_available_enough():
     assert result == 2
 
 def test_returns_0_if_one_ingredient_not_enough():
-    available = {"sugar": 500, "milk": 0, "flour": 700, "eggs": 12}
+    available = {"sugar": 500, "milk": 30, "flour": 700, "eggs": 12}
+    recipe = {"sugar": 100, "milk": 100, "flour": 340, "eggs": 1}
+    result = cake(available, recipe)
+    assert result == 0
+
+def test_returns_0_if_one_ingredient_missing():
+    available = {"sugar": 500, "flour": 700, "eggs": 12}
     recipe = {"sugar": 100, "milk": 100, "flour": 340, "eggs": 1}
     result = cake(available, recipe)
     assert result == 0

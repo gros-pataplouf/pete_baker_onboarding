@@ -9,5 +9,6 @@ def cake(available, recipe):
                 return 0
             if max_cakes == 0 or max_cakes > ingredient_quotient:
                 max_cakes = ingredient_quotient
-
+        else:
+            return 0
     return max_cakes
