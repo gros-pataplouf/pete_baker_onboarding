@@ -5,5 +5,7 @@ def cake(*args):
         if not isinstance(arg, dict):
             raise ValueError("Arguments must be dictionaries.")
     recipe, available = args
-    max_cakes = 0
-    return max_cakes
+    recipe_items = set(recipe.items())
+    available_items = set(available.items())
+    if not recipe_items.issubset(available_items):
+        return 0

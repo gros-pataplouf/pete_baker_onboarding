@@ -25,3 +25,7 @@ def test_throws_if_args_not_dicts():
         cake("foo", 123)
     assert str(e.value) == "Arguments must be dictionaries."
 
+def test_ingredient_missing_returns_0():
+    available = {"apples": 3}
+    recipe = {"flour" : 500}
+    assert cake(available, recipe) == 0
