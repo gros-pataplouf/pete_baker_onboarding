@@ -19,3 +19,9 @@ Examples: // must return 2 cakes({flour: 500, sugar: 200, eggs: 1}, {flour: 1200
 def test_cake_takes_two_args():
     cake({"flour": 400}, {"milk": 200})
     assert True
+
+def test_throws_if_args_not_dicts():
+    with pytest.raises(ValueError) as e:
+        cake("foo", 123)
+    assert str(e.value) == "Arguments must be dictionaries."
+
