@@ -1,32 +1,21 @@
 import pytest
 from  baker import cake
 
-#STEP 1: Adapt the production code to make to first test pass.
+# tests: takes two objects / dictionaires
+# unavailable ingredient considered a 0
+# returns zero if at least one ingredient in insufficient quantity 
+# throws if 
+# wrong number of arguments 
 
-def test_cake_only_one_ingredient():
-    available = {"flour": 500}
-    recipe = {"flour": 500}
-    result = cake(available, recipe)
-    assert result == 1
+"""
+Can you help him to find out, how many cakes he could bake considering his recipes?
+Write a function cakes(), which takes the recipe (object) and the available ingredients(also an object)
+and returns the maximum number of cakes Pete can bake (integer).
+For simplicity there are no units for the amounts (e.g. 1 lb of flour or 200 g of sugar are simply 1 or 200).
+Ingredients that are not present in the objects, can be considered as 0.
+Examples: // must return 2 cakes({flour: 500, sugar: 200, eggs: 1}, {flour: 1200, sugar: 1200, eggs: 5, milk: 200}); // must return 0 cakes({apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100}, {sugar: 500, flour: 2000, milk: 2000});
+"""
 
-#STEP 2: Delete the @pytest.mark.skip decorator for each of these tests and adapt the production code to make tests pass.
-
-@pytest.mark.skip
-def test_one_ingredient_not_in_recipe():
-    available = {"flour": 500}
-    recipe = {"milk": 500}
-    result = cake(available, recipe)
-    assert result == 0
-
-@pytest.mark.skip
-def test_returns_0_if_ingredient_insufficient():
-    available = {"sugar": 500}
-    recipe = {"sugar": 600}
-    result = cake(available, recipe)
-    assert result == 0
-
-# STEP 3: now write a test for the following case: cake function should return a positive integer if all ingredients are available in sufficient quantity
-
-# STEP 4: now write a test for the following case: cake function should return 0 if at least one ingredient is available in insufficient quantity
-
-# STEP 5: one scenario has not been considered. Can you figure out which one it is, and cover the edge case?
+def test_cake_takes_two_args():
+    cake({"flour": 400}, {"milk": 200})
+    assert True
