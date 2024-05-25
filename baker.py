@@ -9,5 +9,4 @@ def cake(*args):
     available_ingredients = set(available.keys())
     if not recipe_ingredients.issubset(available_ingredients):
         return 0
-    for ingredient in recipe_ingredients:
-        return available[ingredient] // recipe[ingredient]
+    return min([available[ingredient] // recipe[ingredient] for ingredient in recipe_ingredients])
