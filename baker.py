@@ -3,9 +3,11 @@ def cake(*args):
         raise Exception("This function takes exactely two arguments")
     for arg in args:
         if not isinstance(arg, dict):
-            raise ValueError("Arguments must be dictionaries.")
-    recipe, available = args
-    recipe_items = set(recipe.items())
-    available_items = set(available.items())
-    if not recipe_items.issubset(available_items):
+            raise TypeError("Arguments must be dictionaries.")
+    available, recipe  = args
+    recipe_ingredients = set(recipe.keys())
+    available_ingredients = set(available.keys())
+    if not recipe_ingredients.issubset(available_ingredients):
         return 0
+    for ingredient in recipe_ingredients:
+        return available[ingredient] // recipe[ingredient]

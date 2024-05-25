@@ -21,7 +21,7 @@ def test_cake_takes_two_args():
     assert True
 
 def test_throws_if_args_not_dicts():
-    with pytest.raises(ValueError) as e:
+    with pytest.raises(TypeError) as e:
         cake("foo", 123)
     assert str(e.value) == "Arguments must be dictionaries."
 
@@ -29,3 +29,15 @@ def test_ingredient_missing_returns_0():
     available = {"apples": 3}
     recipe = {"flour" : 500}
     assert cake(available, recipe) == 0
+
+def test_returns_3_if_triple_of_recipe():
+    available = {"apples": 3}
+    recipe = {"apples" : 1}
+    assert cake(available, recipe) == 3
+
+def test_returns_0_if_ingredient_insufficient():
+    available = {"sugar": 500}
+    recipe = {"sugar": 600}
+    result = cake(available, recipe)
+    assert result == 0
+
