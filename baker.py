@@ -17,3 +17,5 @@ class Bakery:
     def pantry(self):
         return self.__pantry
 
+    def use(self, needed_ingredients : dict) -> dict :
+        return needed_ingredients

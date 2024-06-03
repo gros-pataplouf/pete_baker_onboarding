@@ -11,7 +11,11 @@ Can you help him to find out, how many cakes he could bake considering his recip
 #### 1.The Bakery.
 - Model the bakery as a class. Pete's Bakery has a name.    
 - The bakery has a pantry of available ingredients. 
-- A recipe consists of several ingredients. It indicates the quantity needed of each ingredient to make exactly one cake.
+- The baker can add ingredients to the pantry to stock up
+- The baker can take ingredients from the pantry
+- If the baker tries to take more of an ingredient than what is available, the application throws an error
+
+
 
 
 #### 2. The Bakery 
