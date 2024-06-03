@@ -6,6 +6,35 @@ Pete likes to bake some cakes. He has some recipes and ingredients. Unfortunatel
 
 Can you help him to find out, how many cakes he could bake considering his recipes?
 
+### Recipes and Ingredients. 
+
+#### 1.The Bakery.
+- Model the bakery as a class. Pete's Bakery has a name.    
+- The bakery has a pantry of available ingredients. 
+- A recipe consists of several ingredients. It indicates the quantity needed of each ingredient to make exactly one cake.
+
+
+#### 2. The Bakery 
+- the bakery has a Pantry, where Pete stores the ingredients. 
+- Pete can stock up the pantry if an ingredient is missing
+- has several cakes ready (on display)
+- Write a function cakes(), which takes the recipe (object) and the available ingredients (also an object) and returns the maximum number of cakes Pete can bake (integer).
+
+
+
+
+#### 3. The customers: 
+- a customer is a person, who has a name
+- a customer has a wallet, which 
+- can buy a cake from the bakery if it is on display
+- ensure the customers cannot change the bakery's name. 
+- can place an Order. 
+- the bakery can accept or refuse the order, depending on whether the ingredients 
+- 
+
+
+
+
 Write a function cakes(), which takes the recipe (object) and the available ingredients (also an object) and returns the maximum number of cakes Pete can bake (integer).
 
 For simplicity there are no units for the amounts (e.g. 1 lb of flour or 200 g of sugar are simply 1 or 200). Ingredients that are not present in the objects, can be considered as 0.
