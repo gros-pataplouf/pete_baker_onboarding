@@ -15,3 +15,6 @@ def test_name_cannot_be_changed_from_outside():
     assert petes_bakery.name == "Pete's Delights"
     
 
+def test_starts_out_with_empty_pantry():
+    petes_bakery = Bakery("Pete's Delights")
+    assert petes_bakery.pantry == {}
