@@ -6,7 +6,7 @@ class Bakery:
 
     def __add__(self, ingredients):
         for i in ingredients:
-            self.__pantry[i] = ingredients[i]
+            self.__pantry[i] = self.__pantry.get(i, 0) + ingredients[i]
         return self
 
     @property

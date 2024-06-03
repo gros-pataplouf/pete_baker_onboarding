@@ -23,3 +23,11 @@ def test_can_stock_pantry():
     petes_bakery = Bakery("Pete's Delights")
     petes_bakery += {"sugar": 500, "butter": 200}
     assert petes_bakery.pantry == {"sugar": 500, "butter": 200}
+
+def test_can_increment_existing_ingredient_quantity():
+    petes_bakery = Bakery("Pete's Delights")
+    petes_bakery += {"sugar": 500, "butter": 200}
+    petes_bakery += {"sugar": 500, "butter": 200}
+    assert petes_bakery.pantry == {"sugar": 1000, "butter": 400}
+
+
