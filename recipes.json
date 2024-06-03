@@ -1,0 +1,70 @@
+[
+    {
+        "name": "Chocolate Cake",
+        "ingredients": {
+            "flour": 200,
+            "sugar": 150,
+            "cocoa powder": 75,
+            "baking soda": 5,
+            "salt": 2,
+            "eggs": 2,
+            "milk": 120,
+            "oil": 120,
+            "vanilla": 10
+        }
+    },
+    {
+        "name": "Carrot Cake",
+        "ingredients": {
+            "flour": 250,
+            "sugar": 200,
+            "baking soda": 2,
+            "ground cinnamon": 5,
+            "salt": 2,
+            "eggs": 3,
+            "oil": 180,
+            "carrots": 300,
+            "walnuts": 100,
+            "cream cheese": 200
+        }
+    },
+    {
+        "name": "Lemon Pie",
+        "ingredients": {
+            "butter": 100,
+            "eggs": 3,
+            "flour": 200,
+            "lemons": 3
+        }
+    },
+    {
+        "name": "Red Velvet Cake",
+        "ingredients": {
+            "flour": 250,
+            "sugar": 200,
+            "cocoa powder": 25,
+            "baking soda": 2,
+            "salt": 2,
+            "eggs": 2,
+            "milk": 180,
+            "oil": 120,
+            "vanilla": 10,
+            "vinegar": 10
+        }
+    },
+    {
+        "name": "Strawberry Shortcake",
+        "ingredients": {
+            "flour": 200,
+            "sugar": 100,
+            "baking soda": 2,
+            "salt": 2,
+            "butter": 100,
+            "milk": 60,
+            "eggs": 1,
+            "vanilla": 5,
+            "strawberries": 300,
+            "cream": 200
+        }
+    }
+]

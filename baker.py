@@ -1,4 +1,6 @@
-class Cake:
+import json
+
+class Recipe:
     def __init__(self, name : str, recipe : dict):
         self.__name = name
         self.__recipe = recipe
@@ -9,21 +11,23 @@ class Cake:
     def recipe(self):
         return self.__recipe
     
-    
-
-
-
 
 class Bakery:
     
     def __init__(self, name):
         self.__name = name
         self.__pantry = {}
+        self.recipes = [Recipe(name, ingredients) for name, ingredients in self.get_recipes()]
 
     def __add__(self, ingredients):
         for i in ingredients:
             self.__pantry[i] = self.__pantry.get(i, 0) + ingredients[i]
         return self
+    
+    def get_recipes(self):
+        with open("recipes.json") as recipe_file:
+            recipes = json.load(recipe_file)
+        return recipes
 
     @property
     def name(self):

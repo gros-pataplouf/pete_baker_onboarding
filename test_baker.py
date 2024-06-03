@@ -1,12 +1,10 @@
-import pytest
-from  baker import Bakery, Cake
+import pytest, json
+from  baker import Bakery, Recipe
 
-# STEP 1: write the production code to ensure the test passes. 
 
 def test_bakery_has_name():
     petes_bakery = Bakery("Sweet Pete")
     assert petes_bakery.name == "Sweet Pete"
-
 
 def test_name_cannot_be_changed_from_outside():
     petes_bakery = Bakery("Pete's Delights")
@@ -48,10 +46,15 @@ def test_throws_if_ingredient_insufficient_and_puts_back_on_shelf():
         petes_bakery.use({"sugar": 600, "butter": 50})
     assert petes_bakery.pantry == {"sugar": 500, "butter": 200}
 
-def test_cake_has_name_and_recipe():
-    cake = Cake("Lemon pie", {"lemons": 3, "eggs": 3, "flour": 200, "sugar": 150, "butter": 150})
-    assert cake.name == "Lemon pie"
-    assert cake.recipe.get("lemons") == 3
+def test_recipe_has_name_and_recipe():
+    recipe = Recipe("Lemon pie", {"lemons": 3, "eggs": 3, "flour": 200, "sugar": 150, "butter": 150})
+    assert recipe.name == "Lemon pie"
+    assert recipe.recipe.get("lemons") == 3
+
+def test_bakery_has_recipes():
+    petes_bakery = Bakery("Pete's Delights")
+    assert len(petes_bakery.recipes) == 5
+    assert isinstance(petes_bakery.recipes[0], Recipe)
 
 
 # def test_max_cakes_takes_two_args():
