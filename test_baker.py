@@ -7,3 +7,11 @@ def test_bakery_has_name():
     petes_bakery = Bakery("Sweet Pete")
     assert petes_bakery.name == "Sweet Pete"
 
+
+def test_name_cannot_be_changed_from_outside():
+    petes_bakery = Bakery("Pete's Delights")
+    with pytest.raises(Exception):
+        petes_bakery.name = "Flour Power"
+    assert petes_bakery.name == "Pete's Delights"
+    
+
