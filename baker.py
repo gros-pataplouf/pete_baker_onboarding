@@ -1,3 +1,15 @@
+class Cake:
+    def __init__(self, name):
+        self.__name = name
+    @property
+    def name(self):
+        return self.__name
+    
+    
+
+
+
+
 class Bakery:
     
     def __init__(self, name):
@@ -23,5 +35,7 @@ class Bakery:
             for i in needed_ingredients:
                 self.__pantry[i] -= needed_ingredients[i]
         else:
-            raise ValueError("Some ingredients are unavailable", unavailable_ingredients)
+            raise ValueError("Some ingredients are not available in sufficient quantity, please check the pantry.", unavailable_ingredients)
         return needed_ingredients
+    
+    
