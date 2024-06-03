@@ -18,6 +18,10 @@ class Bakery:
         return self.__pantry
 
     def use(self, needed_ingredients : dict) -> dict :
-        for i in needed_ingredients:
-            self.__pantry[i] -= needed_ingredients[i]
+        unavailable_ingredients = list(filter(lambda ingredient: self.__pantry[ingredient] <= needed_ingredients[ingredient], needed_ingredients))
+        if not unavailable_ingredients:
+            for i in needed_ingredients:
+                self.__pantry[i] -= needed_ingredients[i]
+        else:
+            raise ValueError("Some ingredients are unavailable", unavailable_ingredients)
         return needed_ingredients
