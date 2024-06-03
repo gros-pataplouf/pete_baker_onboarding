@@ -18,4 +18,6 @@ class Bakery:
         return self.__pantry
 
     def use(self, needed_ingredients : dict) -> dict :
+        for i in needed_ingredients:
+            self.__pantry[i] -= needed_ingredients[i]
         return needed_ingredients

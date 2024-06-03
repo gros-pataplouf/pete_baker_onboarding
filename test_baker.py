@@ -36,4 +36,8 @@ def test_if_ingredient_available_returns_needed_quantity():
     needed_ingredient = petes_bakery.use({"sugar": 100})
     assert needed_ingredient == {"sugar": 100}
 
-
+def test_pantry_diminishes_if_ingredient_used():
+    petes_bakery = Bakery("Pete's Delights")
+    petes_bakery += {"sugar": 500, "butter": 200}
+    petes_bakery.use({"sugar": 100})
+    assert petes_bakery.pantry == {"sugar": 400, "butter": 200}
