@@ -18,3 +18,8 @@ def test_name_cannot_be_changed_from_outside():
 def test_starts_out_with_empty_pantry():
     petes_bakery = Bakery("Pete's Delights")
     assert petes_bakery.pantry == {}
+
+def test_can_stock_pantry():
+    petes_bakery = Bakery("Pete's Delights")
+    petes_bakery += {"sugar": 500, "butter": 200}
+    assert petes_bakery.pantry == {"sugar": 500, "butter": 200}
