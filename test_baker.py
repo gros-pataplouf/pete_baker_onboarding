@@ -48,9 +48,10 @@ def test_throws_if_ingredient_insufficient_and_puts_back_on_shelf():
         petes_bakery.use({"sugar": 600, "butter": 50})
     assert petes_bakery.pantry == {"sugar": 500, "butter": 200}
 
-def test_cake_has_name():
-    cake = Cake("Lemon pie")
+def test_cake_has_name_and_recipe():
+    cake = Cake("Lemon pie", {"lemons": 3, "eggs": 3, "flour": 200, "sugar": 150, "butter": 150})
     assert cake.name == "Lemon pie"
+    assert cake.recipe.get("lemons") == 3
 
 
 # def test_max_cakes_takes_two_args():
