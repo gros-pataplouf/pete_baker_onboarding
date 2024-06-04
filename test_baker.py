@@ -66,20 +66,17 @@ def test_max_cakes_takes_two_args():
     petes_bakery = Bakery("Pete's Delights")
     petes_bakery += {"flour": 1000, "cocoa powder": 500}
     try:
-        petes_bakery.max_cakes({"flour": 400, "milk": 200})
+        petes_bakery.max_cakes("Lemon Pie")
     except Exception:
         assert False
 
-# def test_throws_if_args_not_dicts():
-#     with pytest.raises(TypeError) as e:
-#         cake("foo", 123)
-#     assert str(e.value) == "Arguments must be dictionaries."
-
-# def test_returns_0_if_one_ingredient_missing():
-#     available = {"sugar": 500, "flour": 700, "eggs": 12}
-#     recipe = {"sugar": 100, "milk": 100, "flour": 340, "eggs": 1}
-#     result = cake(available, recipe)
-#     assert result == 0
+def test_max_cakes_0_if_at_least_one_ingredient_missing():
+    available = {"sugar": 500, "flour": 700, "eggs": 12}
+    recipe = {"sugar": 100, "milk": 100, "flour": 340, "eggs": 1}
+    petes_bakery = Bakery("Pete's Delights")
+    petes_bakery += {"flour": 1000, "cocoa powder": 500}
+    result = petes_bakery.max_cakes("Lemon Pie")
+    assert result == 0
 
 # def test_returns_3_if_triple_of_recipe():
 #     available = {"apples": 3}

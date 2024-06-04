@@ -55,5 +55,6 @@ class Bakery:
                 return recipe.ingredients
     
     def max_cakes(self, recipe_name: str) -> int:
-        return None
+        needed_ingredients = self.get_ingredients_by_recipe_name(recipe_name)
+        return min([self.pantry.get(ingredient, 0) // needed_ingredients.get(ingredient)  for ingredient in needed_ingredients ])
 
