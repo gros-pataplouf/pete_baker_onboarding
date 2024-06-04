@@ -1,40 +1,43 @@
 import json
 
 class Recipe:
-    def __init__(self, name : str, recipe : dict):
+
+    def __init__(self, name : str, ingredients : dict):
         self.__name = name
-        self.__recipe = recipe
+        self.__ingredients = ingredients
+
     @property
     def name(self):
         return self.__name
+    
     @property
-    def recipe(self):
-        return self.__recipe
+    def ingredients(self):
+        return self.__ingredients
     
 
 class Bakery:
     
-    def __init__(self, name):
+    def __init__(self, name : str):
         self.__name = name
         self.__pantry = {}
-        self.recipes = [Recipe(name, ingredients) for name, ingredients in self.get_recipes()]
+        self.recipes = [Recipe(**description) for description in self.get_recipes()]
 
-    def __add__(self, ingredients):
+    def __add__(self, ingredients : dict) -> object:
         for i in ingredients:
             self.__pantry[i] = self.__pantry.get(i, 0) + ingredients[i]
         return self
     
-    def get_recipes(self):
+    def get_recipes(self) -> list:
         with open("recipes.json") as recipe_file:
             recipes = json.load(recipe_file)
         return recipes
 
     @property
-    def name(self):
+    def name(self) -> str:
         return self.__name
     
     @property
-    def pantry(self):
+    def pantry(self) -> dict:
         return self.__pantry
 
     def use(self, needed_ingredients : dict) -> dict :
@@ -46,4 +49,9 @@ class Bakery:
             raise ValueError("Some ingredients are not available in sufficient quantity, please check the pantry.", unavailable_ingredients)
         return needed_ingredients
     
-    
+    def get_ingredients(self, recipe_name : str) -> dict :
+        for recipe in self.recipes:
+            print(recipe.name, recipe_name)
+            if recipe.name == recipe_name:
+                print(recipe.ingredients)
+                return recipe.ingredients

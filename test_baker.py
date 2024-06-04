@@ -49,12 +49,20 @@ def test_throws_if_ingredient_insufficient_and_puts_back_on_shelf():
 def test_recipe_has_name_and_recipe():
     recipe = Recipe("Lemon pie", {"lemons": 3, "eggs": 3, "flour": 200, "sugar": 150, "butter": 150})
     assert recipe.name == "Lemon pie"
-    assert recipe.recipe.get("lemons") == 3
+    assert recipe.ingredients.get("lemons") == 3
 
 def test_bakery_has_recipes():
     petes_bakery = Bakery("Pete's Delights")
     assert len(petes_bakery.recipes) == 5
     assert isinstance(petes_bakery.recipes[0], Recipe)
+
+def test_can_get_ingredients_by_recipe_name():
+    petes_bakery = Bakery("Pete's Delights")
+    for recipe in petes_bakery.recipes:
+        print(recipe)
+    lemon_pie_ingredients = petes_bakery.get_ingredients("Lemon Pie")
+    assert lemon_pie_ingredients == { "butter": 100, "eggs": 3, "flour": 200,  "lemons": 3, "sugar": 150 }
+
 
 
 # def test_max_cakes_takes_two_args():
