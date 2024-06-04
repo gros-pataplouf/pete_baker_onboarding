@@ -6,9 +6,8 @@ Pete likes to bake some cakes. He has some recipes and ingredients. Unfortunatel
 
 Can you help him to find out, how many cakes he could bake considering his recipes?
 
-### Recipes and Ingredients. 
 
-#### 1.The Bakery.
+### 1.The Bakery.
 - Model the bakery as a class. Pete's Bakery has a name.    
 - The bakery has a pantry of available ingredients, which is a dictionary. 
 - The baker can add ingredients to stock the pantry.
@@ -17,28 +16,18 @@ Can you help him to find out, how many cakes he could bake considering his recip
 
 
 
-#### 2. The Recipes.
+### 2. The Recipes.
 - The bakery has a list of recipes, which is created when the bakery is instantiated.
 - A recipe is has a name, as well as a list of ingredients associated with it. 
 - You can look up the ingredients by searching for the name of the recipe. 
 - Write a function max_cakes(), which takes the recipe name, and the ingredients available in the pantry and returns the maximum number of cakes Pete can bake (integer).
+- TBD a function make_cake(), which take a varialble number of string arguments (the names of the cakes), and uses ingredients in the pantry ?
+
+### Thoughts. Selling cakes (cakes on display vs cakes on demand), taking orders from customers (first in, first served), cashflow, restocking at the wholesaler's... -> min amount of each ingredient ???
+### Ingredient expiration date (use flour bought 4 weeks ago before the one bought 2 weeks ago ?)
+ 
 
 
-
-
-#### 3. The customers: 
-- a customer is a person, who has a name
-- a customer has a wallet, which 
-- can buy a cake from the bakery if it is on display
-- ensure the customers cannot change the bakery's name. 
-- can place an Order. 
-- the bakery can accept or refuse the order, depending on whether the ingredients 
-- 
-
-
-
-
-Write a function cakes(), which takes the recipe (object) and the available ingredients (also an object) and returns the maximum number of cakes Pete can bake (integer).
 
 For simplicity there are no units for the amounts (e.g. 1 lb of flour or 200 g of sugar are simply 1 or 200). Ingredients that are not present in the objects, can be considered as 0.
 
