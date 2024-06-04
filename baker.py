@@ -20,17 +20,20 @@ class Bakery:
     def __init__(self, name : str):
         self.__name = name
         self.__pantry = {}
-        self.recipes = [Recipe(**description) for description in self.get_recipes()]
+        self.__recipes = []
 
     def __add__(self, ingredients : dict) -> object:
         for i in ingredients:
             self.__pantry[i] = self.__pantry.get(i, 0) + ingredients[i]
         return self
     
-    def get_recipes(self) -> list:
-        with open("recipes.json") as recipe_file:
-            recipes = json.load(recipe_file)
-        return recipes
+    @property
+    def recipes(self):
+        return self.__recipes
+
+    @recipes.setter
+    def recipes(self, new_recipes: list):
+        self.__recipes.append(Recipe(**content) for content in new_recipes)
 
     @property
     def name(self) -> str:
