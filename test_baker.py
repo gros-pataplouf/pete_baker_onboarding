@@ -71,17 +71,19 @@ def test_max_cakes_takes_two_args():
         assert False
 
 def test_max_cakes_0_if_at_least_one_ingredient_missing():
-    available = {"sugar": 500, "flour": 700, "eggs": 12}
-    recipe = {"sugar": 100, "milk": 100, "flour": 340, "eggs": 1}
     petes_bakery = Bakery("Pete's Delights")
     petes_bakery += {"flour": 1000, "cocoa powder": 500}
     result = petes_bakery.max_cakes("Lemon Pie")
     assert result == 0
 
-# def test_returns_3_if_triple_of_recipe():
-#     available = {"apples": 3}
-#     recipe = {"apples" : 1}
-#     assert cake(available, recipe) == 3
+def test_returns_3_if_triple_of_recipe():
+    petes_bakery = Bakery("Pete's Delights")
+    petes_bakery += {"flour": 1000, "cocoa powder": 500, "apples": 9}
+    applecake_recipe = Recipe("Apple Cake", {"apples": 3})
+    petes_bakery.recipes.append(applecake_recipe)
+    result = petes_bakery.max_cakes("Apple Cake")
+    assert result == 3
+
 
 # def test_returns_0_if_ingredient_insufficient():
 #     available = {"sugar": 500}
