@@ -33,7 +33,7 @@ class Bakery:
 
     @recipes.setter
     def recipes(self, new_recipes: list):
-        self.__recipes.append(Recipe(**content) for content in new_recipes)
+        self.__recipes += [Recipe(**content) for content in new_recipes]
 
     @property
     def name(self) -> str:

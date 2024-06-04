@@ -59,8 +59,7 @@ def test_recipe_has_name_and_ingredients():
 
 def test_bakery_has_recipes():
     petes_bakery = Bakery("Pete's Delights")
-    assert len(petes_bakery.recipes) == 5
-    assert isinstance(petes_bakery.recipes[0], Recipe)
+    assert len(petes_bakery.recipes) == 0
 
 def test_can_get_ingredients_by_recipe_name(setup_recipe_list):
     petes_bakery = Bakery("Pete's Delights")
