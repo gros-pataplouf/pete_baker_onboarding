@@ -49,9 +49,11 @@ class Bakery:
             raise ValueError("Some ingredients are not available in sufficient quantity, please check the pantry.", unavailable_ingredients)
         return needed_ingredients
     
-    def get_ingredients(self, recipe_name : str) -> dict :
+    def get_ingredients_by_recipe_name(self, recipe_name : str) -> dict :
         for recipe in self.recipes:
-            print(recipe.name, recipe_name)
             if recipe.name == recipe_name:
-                print(recipe.ingredients)
                 return recipe.ingredients
+    
+    def max_cakes(self, recipe_name: str) -> int:
+        return None
+

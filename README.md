@@ -10,19 +10,18 @@ Can you help him to find out, how many cakes he could bake considering his recip
 
 #### 1.The Bakery.
 - Model the bakery as a class. Pete's Bakery has a name.    
-- The bakery has a pantry of available ingredients. 
-- The baker can add ingredients to the pantry to stock up
-- The baker can take ingredients from the pantry
-- If the baker tries to take more of an ingredient than what is available, the application throws an error
+- The bakery has a pantry of available ingredients, which is a dictionary. 
+- The baker can add ingredients to stock the pantry.
+- The baker can use ingredients from the pantry.
+- If the baker tries to use of an ingredient than what is available, the application throws an error. Any ingredients taken before are then restored to the pantry. 
 
 
 
-
-#### 2. The Bakery 
-- the bakery has a Pantry, where Pete stores the ingredients. 
-- Pete can stock up the pantry if an ingredient is missing
-- has several cakes ready (on display)
-- Write a function cakes(), which takes the recipe (object) and the available ingredients (also an object) and returns the maximum number of cakes Pete can bake (integer).
+#### 2. The Recipes.
+- The bakery has a list of recipes, which is created when the bakery is instantiated.
+- A recipe is has a name, as well as a list of ingredients associated with it. 
+- You can look up the ingredients by searching for the name of the recipe. 
+- Write a function max_cakes(), which takes the recipe name, and the ingredients available in the pantry and returns the maximum number of cakes Pete can bake (integer).
 
 
 
