@@ -9,11 +9,6 @@ import org.junit.Test;
  */
 public class BakerTest
 {
-    @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
-    }
 
     @Test
     public void cakeTestReturns1()
@@ -25,6 +20,15 @@ public class BakerTest
         Baker pete = new Baker();
         int numOfCakes = pete.cakes(available, recipe);
         assertTrue(numOfCakes == 1);
+    }
+    @Test
+    public void returns0IfIngredientUnavailable() {
+        HashMap<String, Integer> recipe = new HashMap<>();
+        recipe.put("flour", 200);
+        HashMap<String, Integer> available = new HashMap<>();
+        Baker pete = new Baker();
+        int numOfCakes = pete.cakes(available, recipe);
+        assertTrue(numOfCakes == 0);
 
     }
 }

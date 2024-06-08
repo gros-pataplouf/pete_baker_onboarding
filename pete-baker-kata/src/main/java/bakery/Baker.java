@@ -10,9 +10,16 @@ public class Baker
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        System.out.println( "Welcome to Pete's Bakery!" );
     }
-    public static int cakes(HashMap available, HashMap recipe) {
-        return 1;
+    public static int cakes(HashMap<String, Integer> available, HashMap<String, Integer> recipe) {
+        int quantity = 0;
+        for (String ingredient: recipe.keySet()) {
+            quantity = available.getOrDefault(ingredient, 0) / recipe.get(ingredient);
+            System.out.println(quantity);
+        }
+        return quantity;
+
+
     }
 }
