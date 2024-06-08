@@ -13,12 +13,19 @@ public class Baker
         System.out.println( "Welcome to Pete's Bakery!" );
     }
     public static int cakes(HashMap<String, Integer> available, HashMap<String, Integer> recipe) {
-        int quantity = 0;
+        int cakeCounter = 0;
+        int loopCounter = 0;
         for (String ingredient: recipe.keySet()) {
-            quantity = available.getOrDefault(ingredient, 0) / recipe.get(ingredient);
+            int ratioForIngredient = available.getOrDefault(ingredient, 0) / recipe.get(ingredient);
+            if (loopCounter == 0) {
+                cakeCounter = ratioForIngredient;
+            } else {
+                if (ratioForIngredient < cakeCounter) {
+                    cakeCounter = ratioForIngredient;
+                }
+            }
+            loopCounter++;
         }
-        return quantity;
-
-
+        return cakeCounter;
     }
 }
