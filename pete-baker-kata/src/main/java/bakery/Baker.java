@@ -16,7 +16,6 @@ public class Baker
         int quantity = 0;
         for (String ingredient: recipe.keySet()) {
             quantity = available.getOrDefault(ingredient, 0) / recipe.get(ingredient);
-            System.out.println(quantity);
         }
         return quantity;
 
