@@ -23,8 +23,7 @@ Original link [Be careful not to review answers until you’ve completed your an
 ### a) Setting up the repository
 [The following tasks should be done by only one group member.]
 - Create a new repository within the organization [TechRisersWomenGroupCodingSessions](https://github.com/TechRisersWomenGroupCodingSessions).
-- Clone this repo by running required for your language by running `<remote-repo-url>`.     
-- Rename the branch to main. `git branch -m main`.
+- Clone this repo by running on your local machine by running `git clone <remote-repo-url>`. If you want to clone the branch containing the solution, also run `git pull --all`. 
 - Change the remote repository to your own (instead of the one you cloned) `git remote set-url origin <YOUR_NEW_REPO>`
 - Set your own repo as upstream by pushing local content to the new remote `git push -u origin main`. 
 [Task for the other group members]
