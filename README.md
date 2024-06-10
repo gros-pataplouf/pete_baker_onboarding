@@ -16,17 +16,18 @@ _Examples:_
 - must return 0:
   `cakes({apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100}, {sugar: 500, flour: 2000, milk: 2000})`
 
-Original link [Be careful not to review answers until you’ve completed your answer] https://www.codewars.com/kata/525c65e51bf619685c000059
+Original link [Be careful not to review answers until you’ve completed your answer](https://www.codewars.com/kata/525c65e51bf619685c000059).
 
 ## 2. Solving the kata with TDD
 
 ### a) Setting up the repository
-[The following tasks should be done by only one group member.]
+_The following tasks should be done by only one group member._
 - Create a new repository within the organization [TechRisersWomenGroupCodingSessions](https://github.com/TechRisersWomenGroupCodingSessions).
 - Clone this repo by running on your local machine by running `git clone <remote-repo-url>`. If you want to clone the branch containing the solution, also run `git pull --all`. 
 - Change the remote repository to your own (instead of the one you cloned) `git remote set-url origin <YOUR_NEW_REPO>`
-- Set your own repo as upstream by pushing local content to the new remote `git push -u origin main`. 
-[Task for the other group members]
+- Set your own repo as upstream by pushing local content to the new remote `git push -u origin main`.
+
+_Task for the other group members_
 - Now the other group members can clone the new repo your created to their local machines.
 
 ### b) Setting up the environment
