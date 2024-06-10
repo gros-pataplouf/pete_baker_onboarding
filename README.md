@@ -31,13 +31,15 @@ _Task for the other group members_
 - Now the other group members can clone the new repo your created to their local machines.
 
 ### b) Setting up the environment
-You need Python 3.X, as well as the package manager of your choice installed to get started. We use _pip_ in this tutorial. 
-Please check you have python and pip installed as outlined in the [pip documentation](https://pip.pypa.io/en/stable/getting-started/): 
+You need Python 3.X and a python package manager. We use _pip_ in this tutorial, but feel free to use your preferred package manager. 
+Please check you have python and pip installed as outlined in the [pip documentation](https://pip.pypa.io/en/stable/getting-started/):
+
 Linux & MacOs
 ```
 python --version
 python -m pip --version
 ```
+
 Windows
 ```
 py --version
