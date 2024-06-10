@@ -23,19 +23,48 @@ Original link [Be careful not to review answers until you’ve completed your an
 ### a) Setting up the repository
 [The following tasks should be done by only one group member.]
 - Create a new repository within the organization (TechRisersWomenGroupCodingSessions)[https://github.com/TechRisersWomenGroupCodingSessions].
-- Clone the branch required for your language by running `git clone -b <branchname> --single-branch <remote-repo-url>`. <branchname> can be python, javascript or java. // Those branches are not set up yet.     
+- Clone this repo by running required for your language by running `<remote-repo-url>`.     
 - Rename the branch to main. `git branch -m main`.
 - Change the remote repository to your own (instead of the one you cloned) `git remote set-url origin <YOUR_NEW_REPO>`
 - Set your own repo as upstream by pushing local content to the new remote `git push -u origin main`. 
 [Task for the other group members]
-- Now the other group members can clone your new repo to their local machines.
+- Now the other group members can clone the new repo your created to their local machines.
 
 ### b) Setting up the environment
-_to be completed with instructions specific for each programming language. e.g. pipenv for python `pip install`, `pipenv shell`, `pip install -r requirements.txt`, but there are many others..._
+You need Python 3.X, as well as the package manager of your choice installed to get started. We use _pip_ in this tutorial. 
+Please check you have python and pip installed as outlined in the (pip documentation)[https://pip.pypa.io/en/stable/getting-started/]: 
+Linux & MacOs
+```
+python --version
+python -m pip --version
+```
+Windows
+```
+py --version
+py -m pip --version
+```
+Install the dependencies, namely pytest, by running:
+```
+  `pipenv shell`
+  `pip install -r requirements.txt`
+```
+### c) Running pytest and going red
 
-### c) Getting started.
+In your terminal, run 
+```
+pytest
+```
+. 
+Tests should be detected automatically thanks to the naming of the file (e.g. _test_baker.py_) and the naming of the functions (e.g. _test_cake_function_takes_two_args()) starting with *test*.
+
+
+
+
+
+
+### d) Getting started.
 Have a look at the material:
-- baker.py (adjust filename for javascript and java branch) will contain the production code. Currently, it only contains a function cake() which does not return anything. 
+- baker.py will contain the production code. Currently, it only contains a function cake() which does not return anything. 
 -  test_baker.py (adjust filename for javascript and java branch) contains the test. There are already some prewritten tests and steps outlined to get you started. 
 
 
