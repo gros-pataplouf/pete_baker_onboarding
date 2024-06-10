@@ -56,6 +56,9 @@ pytest
 . 
 Tests should be detected automatically thanks to the naming of the file (e.g. _test_baker.py_) and the naming of the functions (e.g. _test_cake_function_takes_two_args()_) starting with __test__.
 
+You should see one test fail, like so:
+
+![image](https://github.com/gros-pataplouf/pete_baker_onboarding/assets/92683838/9ecbd0cb-3508-430b-a3d3-9839756d0958)
 
 
 
