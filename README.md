@@ -61,7 +61,7 @@ Tests should be detected automatically thanks to the naming of the file (e.g. _t
 
 You should see one test fail, like so:
 
-![image](https://github.com/gros-pataplouf/pete_baker_onboarding/assets/92683838/9ecbd0cb-3508-430b-a3d3-9839756d0958)
+![image](pytest_red.png)
 
 
 

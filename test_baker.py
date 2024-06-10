@@ -2,20 +2,14 @@ import pytest
 from  baker import cake
 
 # STEP 1: write the production code to ensure the test passes. 
-def test_cake_function_takes_two_args():
-    try:
-        cake({"flour": 400}, {"milk": 200})
-    except Exception:
-        assert False
+def test_returns_0_if_no_ingredients_available():
+    available = {}
+    recipe = {"flour": 400}
+    max_cakes = cake(available, recipe)
+    assert max_cakes == 0
 
 # STEP 2: delete the @pytest.mark.skip decorator to use the test, then adjust the production code to make it pass.
 # Then proceed to the next test.
-
-@pytest.mark.skip
-def test_throws_if_args_not_dicts():
-    with pytest.raises(TypeError) as e:
-        cake("foo", 123)
-    assert str(e.value) == "Arguments must be dictionaries."
 
 @pytest.mark.skip
 def test_returns_3_if_triple_of_recipe():
