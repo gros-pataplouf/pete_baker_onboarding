@@ -22,7 +22,7 @@ Original link [Be careful not to review answers until you’ve completed your an
 
 ### a) Setting up the repository
 [The following tasks should be done by only one group member.]
-- Create a new repository within the organization (TechRisersWomenGroupCodingSessions)[https://github.com/TechRisersWomenGroupCodingSessions].
+- Create a new repository within the organization [TechRisersWomenGroupCodingSessions](https://github.com/TechRisersWomenGroupCodingSessions).
 - Clone this repo by running required for your language by running `<remote-repo-url>`.     
 - Rename the branch to main. `git branch -m main`.
 - Change the remote repository to your own (instead of the one you cloned) `git remote set-url origin <YOUR_NEW_REPO>`
@@ -32,7 +32,7 @@ Original link [Be careful not to review answers until you’ve completed your an
 
 ### b) Setting up the environment
 You need Python 3.X, as well as the package manager of your choice installed to get started. We use _pip_ in this tutorial. 
-Please check you have python and pip installed as outlined in the (pip documentation)[https://pip.pypa.io/en/stable/getting-started/]: 
+Please check you have python and pip installed as outlined in the [pip documentation](https://pip.pypa.io/en/stable/getting-started/): 
 Linux & MacOs
 ```
 python --version
@@ -45,8 +45,8 @@ py -m pip --version
 ```
 Install the dependencies, namely pytest, by running:
 ```
-  `pipenv shell`
-  `pip install -r requirements.txt`
+  pipenv shell
+  pip install -r requirements.txt
 ```
 ### c) Running pytest and going red
 
@@ -55,7 +55,7 @@ In your terminal, run
 pytest
 ```
 . 
-Tests should be detected automatically thanks to the naming of the file (e.g. _test_baker.py_) and the naming of the functions (e.g. _test_cake_function_takes_two_args()) starting with *test*.
+Tests should be detected automatically thanks to the naming of the file (e.g. _test_baker.py_) and the naming of the functions (e.g. _test_cake_function_takes_two_args()_) starting with __test__.
 
 
 
